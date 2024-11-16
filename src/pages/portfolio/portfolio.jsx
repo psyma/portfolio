@@ -165,7 +165,7 @@ export default class Portfolio extends Component {
                                                 </h2>
                                                 <p className="text-gray-800 dark:text-gray-300 text-sm">
                                                     I’ve developed a dedicated blog to share my expertise in various programming languages. This platform is designed to be a valuable resource for programmers, featuring tutorials, insights, and best practices across a range of languages. My goal is to contribute to the programming community by providing useful information and fostering continuous learning and growth.
-                                                    <a href="" target="_blank" className="text-blue-600 dark:text-blue-500 hover:underline"> link</a>
+                                                    <a href="https://codeflowerhorn.com" target="_blank" className="text-blue-600 dark:text-blue-500 hover:underline"> link</a>
                                                 </p>
                                             </Card>
                                             <Card
@@ -177,7 +177,7 @@ export default class Portfolio extends Component {
                                                 </h2>
                                                 <p className="text-gray-800 dark:text-gray-300 text-sm">
                                                     As a personal project and passion, I’ve developed this chat application with the goal of creating a publicly accessible platform for real-time communication. Driven by my interest in both software development and user experience, I designed this chat app to offer seamless, intuitive interactions. It’s crafted to be a versatile tool for various communication needs, whether for casual conversations or more structured discussions. By making it publicly available, I hope to provide a valuable resource for users seeking a reliable and engaging chat experience, while also honing my skills and exploring new technologies.
-                                                    <a href="" target="_blank" className="text-blue-600 dark:text-blue-500 hover:underline"> link</a>
+                                                    <a href="https://amicanem.com" target="_blank" className="text-blue-600 dark:text-blue-500 hover:underline"> link</a>
                                                 </p>
                                             </Card>
                                         </Tabs.Item> 
