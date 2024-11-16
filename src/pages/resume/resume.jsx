@@ -106,19 +106,19 @@ export default class Resume extends Component {
                                     <List className="flex flex-col gap-3 mt-3 text-sm">
                                         <List.Item className="text-gray-800 dark:text-gray-300">
                                             Primary Education
-                                            <List unstyled className="ml-5">
+                                            <List unstyled className="ml-[1.2rem]">
                                                 <List.Item className="text-gray-800 dark:text-gray-300 text-sm">Umapad Elementary School <br/>2002-2008</List.Item> 
                                             </List>
                                         </List.Item> 
                                         <List.Item className="text-gray-800 dark:text-gray-300">
                                             Secondary Education
-                                            <List unstyled className="ml-5">
+                                            <List unstyled className="ml-[1.2rem]">
                                                 <List.Item className="text-gray-800 dark:text-gray-300 text-sm">Don Gerardo Ll. Ouano MNHS <br/>2008-2012</List.Item> 
                                             </List>
                                         </List.Item> 
                                         <List.Item className="text-gray-800 dark:text-gray-300">
                                         Tertiary
-                                            <List unstyled className="ml-5">
+                                            <List unstyled className="ml-[1.2rem]">
                                                 <List.Item className="text-gray-800 dark:text-gray-300 text-sm">University of Cebu-Banilad BSCpE <br/>2017-2020 (Undergraduate)</List.Item> 
                                             </List>
                                         </List.Item> 
@@ -130,19 +130,19 @@ export default class Resume extends Component {
                                     <List className="flex flex-col gap-3 mt-3 text-sm">
                                         <List.Item className="text-gray-800 dark:text-gray-300">
                                             Bisaya
-                                            <List unstyled className="ml-5">
+                                            <List unstyled className="ml-[1.2rem]">
                                                 <List.Item className="text-gray-800 dark:text-gray-300 text-sm">Native</List.Item> 
                                             </List>
                                         </List.Item> 
                                         <List.Item className="text-gray-800 dark:text-gray-300">
                                             English
-                                            <List unstyled className="ml-5">
+                                            <List unstyled className="ml-[1.2rem]">
                                                 <List.Item className="text-gray-800 dark:text-gray-300 text-sm">Intermediate</List.Item>
                                             </List>
                                         </List.Item> 
                                         <List.Item className="text-gray-800 dark:text-gray-300">
                                             Tagalog
-                                            <List unstyled className="ml-5">
+                                            <List unstyled className="ml-[1.2rem]">
                                                 <List.Item className="text-gray-800 dark:text-gray-300 text-sm">Intermediate</List.Item> 
                                             </List>
                                         </List.Item> 
@@ -178,31 +178,31 @@ export default class Resume extends Component {
                                     <List className="flex flex-col gap-3 mt-3 text-sm">
                                         <List.Item className="text-gray-800 dark:text-gray-300">
                                             Application Programming Interface
-                                            <List unstyled className="ml-5">
+                                            <List unstyled className="ml-[1.2rem]">
                                                 <List.Item className="text-gray-800 dark:text-gray-300">An api for mostly web application but not limited to</List.Item> 
                                             </List>
                                         </List.Item>
                                         <List.Item className="text-gray-800 dark:text-gray-300">
                                             Geographic Information System
-                                            <List unstyled className="ml-5">
+                                            <List unstyled className="ml-[1.2rem]">
                                                 <List.Item className="text-gray-800 dark:text-gray-300">A project(s) that needs to be integrated with geographic information systems</List.Item> 
                                             </List>
                                         </List.Item>
                                         <List.Item className="text-gray-800 dark:text-gray-300">
-                                            Web Applications
-                                            <List unstyled className="ml-5">
+                                            Artificial Intelligent
+                                            <List unstyled className="ml-[1.2rem]">
                                                 <List.Item className="text-gray-800 dark:text-gray-300">A project(s) powered by artificial intelligent e.g object detections, segmentation, tracking, llm & etc</List.Item> 
                                             </List>
                                         </List.Item>
                                         <List.Item className="text-gray-800 dark:text-gray-300">
-                                            Artificial Intelligent
-                                            <List unstyled className="ml-5">
-                                                <List.Item className="text-gray-800 dark:text-gray-300">Any project(s) that is web related SSR/CSR, small/large application</List.Item> 
+                                            Web Applications
+                                            <List unstyled className="ml-[1.2rem]">
+                                                <List.Item className="text-gray-800 dark:text-gray-300">Any project(s) that is web related server side or client side rendering, small or large application</List.Item> 
                                             </List>
                                         </List.Item>
                                         <List.Item className="text-gray-800 dark:text-gray-300">
                                             Cloudstack Integration
-                                            <List unstyled className="ml-5">
+                                            <List unstyled className="ml-[1.2rem]">
                                                 <List.Item className="text-gray-800 dark:text-gray-300">An open-source cloud computing</List.Item>  
                                             </List>
                                         </List.Item>
