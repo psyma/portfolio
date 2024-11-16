@@ -150,7 +150,10 @@ export default class Resume extends Component {
                                 <div>    
                                     <h1 className="flex items-center gap-3 text-gray-800 dark:text-gray-300 text-lg font-bold">
                                         CAREER PROFILE 
-                                        <Tooltip content="Download this resume in pdf" className={this.state.hideIcons ? 'hidden': ''}>
+                                        <Tooltip content={<div>
+                                            <p>Download this resume in pdf</p>
+                                            <p>(Make sure you set the theme into Light mode)</p>
+                                        </div>} className={this.state.hideIcons ? 'hidden': ''}>
                                             <FaDownload id="download_icon" className={this.state.hideIcons ? 'hidden': 'cursor-pointer'}/>
                                         </Tooltip>
                                     </h1>
