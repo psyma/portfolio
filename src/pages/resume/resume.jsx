@@ -12,23 +12,46 @@ import { RiReactjsFill } from "react-icons/ri"
 import { SiCsharp } from "react-icons/si"
 import { SiRubyonrails } from "react-icons/si"
 import { TbBrandCpp } from "react-icons/tb"
+import { FaDownload } from "react-icons/fa6"; 
 
-import { Navbar, DarkThemeToggle, Flowbite, List } from "flowbite-react"
+import { Navbar, DarkThemeToggle, Flowbite, List, Tooltip } from "flowbite-react"
 
 import Footer from "../../components/footer/footer"
+
+import html2pdf from 'html2pdf.js'
 
 export default class Resume extends Component {
     constructor(props) {
         super(props)
 
-        this.state = { }  
+        this.state = {
+            hideIcons: false
+        }  
 
         this.page = "Resume"
     }
     
 
     componentDidMount = () => {
+        const downloadIcon = document.getElementById("download_icon")
+        downloadIcon.addEventListener('click', async () => {
+            await this.downloadResume()
+        })
+    }
 
+    downloadResume = async () => {
+        const element = document.getElementById("resume") 
+        const options = {
+            filename: 'resume.pdf',
+            margin: 0,
+            image: { type: 'jpeg', quality: 1 },
+            html2canvas: { scale: 2 },
+            jsPDF: { unit: 'in', format: 'a3', orientation: 'portrait' },
+        };
+
+        await this.setState({ hideIcons: true })
+        await html2pdf().set(options).from(element).save()
+        await this.setState({ hideIcons: false })
     }
 
     render = () => {
@@ -44,7 +67,7 @@ export default class Resume extends Component {
                         <Navbar.Link href="#/resume" active className="text-lg">Resume</Navbar.Link>
                         <Navbar.Link href="#/portfolio" className="text-lg">Portfolio</Navbar.Link> 
                     </Navbar.Collapse> 
-                    <div> 
+                    <div id="resume"> 
                         <div className="grid md:grid-cols-3 sm:grid-cols-1 container mx-auto flex items-start p-3 lg:gap-0 gap-10 lg:w-3/4 w-full"> 
                             <div className="flex flex-col gap-5"> 
                                 <div>
@@ -53,24 +76,24 @@ export default class Resume extends Component {
                                 </div>
                                 
                                 <div className="flex flex-col text-sm">
-                                    <a href="mailto: rickbengimeda@gmail.com" className="flex items-center gap-1 font-medium text-blue-600 dark:text-blue-500 hover:underline">
-                                        <MdEmail/>
-                                        rickbengimeda@gmail.com
+                                    <a href="mailto: rickbengimeda@gmail.com" className="flex flex-row items-center gap-1 font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                                        <MdEmail className={this.state.hideIcons ? 'hidden': ''}/>
+                                        <span>rickbengimeda@gmail.com</span>
                                     </a>
                                     <a href="https://www.linkedin.com/in/rickben-anthony-gimeda-b5973875/" className="flex items-center gap-1 font-medium text-blue-600 dark:text-blue-500 hover:underline">
-                                        <FaLinkedin/>
+                                        <FaLinkedin className={this.state.hideIcons ? 'hidden': ''}/>
                                         linkedin.com/in/rickben
                                     </a>
                                     <a href="https://github.com/psyma" className="flex items-center gap-1 font-medium text-blue-600 dark:text-blue-500 hover:underline">
-                                        <FaGithub/>
+                                        <FaGithub className={this.state.hideIcons ? 'hidden': ''}/>
                                         github.com/psyma
                                     </a>
                                     <a href="https://github.com/codeflowerhorn" className="flex items-center gap-1 font-medium text-blue-600 dark:text-blue-500 hover:underline">
-                                        <FaGithub/>
+                                        <FaGithub className={this.state.hideIcons ? 'hidden': ''}/>
                                         github.com/codeflowerhorn
                                     </a> 
                                     <a href="https://www.facebook.com/jpakingpotomen" className="flex items-center gap-1 font-medium text-blue-600 dark:text-blue-500 hover:underline">
-                                        <FaFacebook/>
+                                        <FaFacebook className={this.state.hideIcons ? 'hidden': ''}/>
                                         facebook.com/rickben
                                     </a> 
                                 </div> 
@@ -125,7 +148,12 @@ export default class Resume extends Component {
                             </div>
                             <div className="md:col-span-2 col-span-1 flex gap-10 flex-col"> 
                                 <div>    
-                                    <h1 className="text-gray-800 dark:text-gray-300 text-lg font-bold">CAREER PROFILE</h1>
+                                    <h1 className="flex items-center gap-3 text-gray-800 dark:text-gray-300 text-lg font-bold">
+                                        CAREER PROFILE 
+                                        <Tooltip content="Download this resume in pdf" className={this.state.hideIcons ? 'hidden': ''}>
+                                            <FaDownload id="download_icon" className={this.state.hideIcons ? 'hidden': 'cursor-pointer'}/>
+                                        </Tooltip>
+                                    </h1>
                                     <p className="text-gray-800 dark:text-gray-300 text-sm mt-5">I began studying programming in 2018 and have since broadened my expertise to include web development, APIs, and open-source libraries. This journey has significantly enhanced my understanding of object-oriented programming, data structures, and algorithms. I also enjoy creating projects from the ground up. I am continually striving to improve my programming skills and knowledge.</p>
                                 </div>
                             
@@ -202,42 +230,42 @@ export default class Resume extends Component {
                                     <List className="flex flex-col gap-3 mt-3 text-sm">
                                         <List.Item className="text-gray-800 dark:text-gray-300"> 
                                             <div className="inline-flex items-center flex-start gap-2">
-                                                <span className="flex items-center">C/C++ <TbBrandCpp className="ml-2"/></span>  
+                                                <span className="flex items-center">C/C++ <TbBrandCpp className={this.state.hideIcons ? 'hidden': 'ml-2'}/></span>  
                                             </div>
                                         </List.Item>
                                         <List.Item className="text-gray-800 dark:text-gray-300">
                                             <div className="inline-flex items-center flex-start gap-2">
-                                                <span className="flex items-center">Python <FaPython className="ml-2"/></span>  
+                                                <span className="flex items-center">Python <FaPython className={this.state.hideIcons ? 'hidden': 'ml-2'}/></span>  
                                             </div>
                                         </List.Item>
                                         <List.Item className="text-gray-800 dark:text-gray-300">
                                             <div className="inline-flex items-center flex-start gap-2">
-                                                <span className="flex items-center">ReactJS <RiReactjsFill className="ml-2"/></span>  
+                                                <span className="flex items-center">ReactJS <RiReactjsFill className={this.state.hideIcons ? 'hidden': 'ml-2'}/></span>  
                                             </div>
                                         </List.Item>
                                         <List.Item className="text-gray-800 dark:text-gray-300">
                                             <div className="inline-flex items-center flex-start gap-2">
-                                                <span className="flex items-center">Symfony <FaSymfony className="ml-2"/></span>  
+                                                <span className="flex items-center">Symfony <FaSymfony className={this.state.hideIcons ? 'hidden': 'ml-2'}/></span>  
                                             </div>
                                         </List.Item>
                                         <List.Item className="text-gray-800 dark:text-gray-300">
                                             <div className="inline-flex items-center flex-start gap-2">
-                                                <span className="flex items-center">Ruby On Rails <SiRubyonrails className="ml-2"/></span>  
+                                                <span className="flex items-center">Ruby On Rails <SiRubyonrails className={this.state.hideIcons ? 'hidden': 'ml-2'}/></span>  
                                             </div>
                                         </List.Item>
                                         <List.Item className="text-gray-800 dark:text-gray-300">
                                             <div className="inline-flex items-center flex-start gap-2">
-                                                <span className="flex items-center">HTML/CSS <PiFileHtmlBold className="ml-2"/></span>  
+                                                <span className="flex items-center">HTML/CSS <PiFileHtmlBold className={this.state.hideIcons ? 'hidden': 'ml-2'}/></span>  
                                             </div>
                                         </List.Item>
                                         <List.Item className="text-gray-800 dark:text-gray-300">
                                             <div className="inline-flex items-center flex-start gap-2">
-                                                <span className="flex items-center">JavaScript <IoLogoJavascript className="ml-2"/></span>  
+                                                <span className="flex items-center">JavaScript <IoLogoJavascript className={this.state.hideIcons ? 'hidden': 'ml-2'}/></span>  
                                             </div>
                                         </List.Item>
                                         <List.Item className="text-gray-800 dark:text-gray-300">
                                             <div className="inline-flex items-center flex-start gap-2">
-                                                <span className="flex items-center">C# .NET & ASP.NET Core <SiCsharp className="ml-2"/></span>  
+                                                <span className="flex items-center">C# .NET & ASP.NET Core <SiCsharp className={this.state.hideIcons ? 'hidden': 'ml-2'}/></span>  
                                             </div> 
                                         </List.Item>
                                     </List>
