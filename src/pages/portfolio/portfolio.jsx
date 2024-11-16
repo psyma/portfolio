@@ -15,6 +15,9 @@ export default class Portfolio extends Component {
         this.state = { }  
 
         this.page = "Portfolio"
+
+        document.title = "Portfolio"
+        document.getElementById("icon").href = "./assets/P.svg"
     }
     
 
