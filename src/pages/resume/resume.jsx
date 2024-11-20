@@ -179,25 +179,25 @@ export default class Resume extends Component {
                                         <List.Item className="text-gray-800 dark:text-gray-300">
                                             Application Programming Interface
                                             <List unstyled className="ml-[1.2rem]">
-                                                <List.Item className="text-gray-800 dark:text-gray-300">An api for mostly web application but not limited to</List.Item> 
+                                                <List.Item className="text-gray-800 dark:text-gray-300">An API primarily for web applications, but not limited to</List.Item> 
                                             </List>
                                         </List.Item>
                                         <List.Item className="text-gray-800 dark:text-gray-300">
                                             Geographic Information System
                                             <List unstyled className="ml-[1.2rem]">
-                                                <List.Item className="text-gray-800 dark:text-gray-300">A project(s) that needs to be integrated with geographic information systems</List.Item> 
+                                                <List.Item className="text-gray-800 dark:text-gray-300">A project(s) that need to be integrated with Geographic Information Systems (GIS)</List.Item> 
                                             </List>
                                         </List.Item>
                                         <List.Item className="text-gray-800 dark:text-gray-300">
                                             Artificial Intelligent
                                             <List unstyled className="ml-[1.2rem]">
-                                                <List.Item className="text-gray-800 dark:text-gray-300">A project(s) powered by artificial intelligent e.g object detections, segmentation, tracking, llm & etc</List.Item> 
+                                                <List.Item className="text-gray-800 dark:text-gray-300">A project(s) powered by artificial intelligence, e.g., object detection, segmentation, tracking, LLMs, etc.</List.Item> 
                                             </List>
                                         </List.Item>
                                         <List.Item className="text-gray-800 dark:text-gray-300">
                                             Web Applications
                                             <List unstyled className="ml-[1.2rem]">
-                                                <List.Item className="text-gray-800 dark:text-gray-300">Any project(s) that is web related server side or client side rendering, small or large application</List.Item> 
+                                                <List.Item className="text-gray-800 dark:text-gray-300">Any web-related project(s), whether server-side or client-side rendering, small or large applications</List.Item> 
                                             </List>
                                         </List.Item>
                                         <List.Item className="text-gray-800 dark:text-gray-300">
@@ -211,7 +211,7 @@ export default class Resume extends Component {
 
                                 <div> 
                                     <h1 className="text-gray-800 dark:text-gray-300 text-lg font-bold">RESPONSIBILITIES</h1>
-                                    <p className="text-gray-800 dark:text-gray-300 text-sm mt-5">List of responsibilities that I usually do as a software engineer</p>
+                                    <p className="text-gray-800 dark:text-gray-300 text-sm mt-5">List of responsibilities that I typically have as a software engineer.</p>
                                     <List className="flex flex-col gap-3 mt-3 text-sm">
                                         <List.Item className="text-gray-800 dark:text-gray-300">
                                             Planning
@@ -233,6 +233,7 @@ export default class Resume extends Component {
 
                                 <div> 
                                     <h1 className="text-gray-800 dark:text-gray-300 text-lg font-bold">LANGUAGES & FRAMEWORKS</h1>
+                                    <p className="text-gray-800 dark:text-gray-300 text-sm mt-5">List of languages and frameworks with which I am familiar.</p>
                                     <List className="flex flex-col gap-3 mt-3 text-sm">
                                         <List.Item className="text-gray-800 dark:text-gray-300"> 
                                             <div className="inline-flex items-center flex-start gap-2">
