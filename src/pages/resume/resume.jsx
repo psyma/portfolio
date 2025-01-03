@@ -74,7 +74,7 @@ export default class Resume extends Component {
                         <div className="grid md:grid-cols-3 sm:grid-cols-1 container mx-auto flex items-start p-3 lg:gap-0 gap-10 lg:w-3/4 w-full"> 
                             <div className="flex flex-col gap-5"> 
                                 <div>
-                                    <img className="rounded" src="./assets/profile.png" alt="Rickben Anthony Q. Gimeda" style={{ objectFit: 'cover', width: "215px", height: "200px" }}/> 
+                                    <img className="rounded" src="./assets/profile1.png" alt="Rickben Anthony Q. Gimeda" style={{ objectFit: 'cover', width: "215px", height: "200px" }}/> 
                                     <p className="text-gray-800 dark:text-gray-300 text-lg font-semibold">Rickben Anthony Gimeda</p>
                                 </div>
                                 
