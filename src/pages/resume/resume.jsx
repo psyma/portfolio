@@ -3,16 +3,14 @@ import React, { Component } from "react"
 import { FaFacebook } from "react-icons/fa"
 import { FaGithub } from "react-icons/fa"
 import { FaLinkedin } from "react-icons/fa"
-import { FaPython } from "react-icons/fa"
-import { FaSymfony } from "react-icons/fa"
+import { FaPython } from "react-icons/fa" 
 import { IoLogoJavascript } from "react-icons/io5"
 import { MdEmail } from "react-icons/md"
 import { PiFileHtmlBold } from "react-icons/pi"
 import { RiReactjsFill } from "react-icons/ri"
-import { SiCsharp } from "react-icons/si"
-import { SiRubyonrails } from "react-icons/si"
-import { TbBrandCpp } from "react-icons/tb"
-import { FaDownload } from "react-icons/fa6"; 
+import { SiCsharp } from "react-icons/si" 
+import { FaDownload } from "react-icons/fa6"
+import { SiBlazor } from "react-icons/si"
 
 import { Navbar, DarkThemeToggle, Flowbite, List, Tooltip } from "flowbite-react"
 
@@ -234,31 +232,16 @@ export default class Resume extends Component {
                                 <div> 
                                     <h1 className="text-gray-800 dark:text-gray-300 text-lg font-bold">LANGUAGES & FRAMEWORKS</h1>
                                     <p className="text-gray-800 dark:text-gray-300 text-sm mt-5">List of languages and frameworks with which I am familiar.</p>
-                                    <List className="flex flex-col gap-3 mt-3 text-sm">
-                                        <List.Item className="text-gray-800 dark:text-gray-300"> 
+                                    <List className="flex flex-col gap-3 mt-3 text-sm"> 
+                                        <List.Item className="text-gray-800 dark:text-gray-300">
                                             <div className="inline-flex items-center flex-start gap-2">
-                                                <span className="flex items-center">C/C++ <TbBrandCpp className={this.state.hideIcons ? 'hidden': 'ml-2'}/></span>  
-                                            </div>
+                                                <span className="flex items-center">C# ASP.NET Blazor <SiBlazor className={this.state.hideIcons ? 'hidden': 'ml-2'}/></span>  
+                                            </div> 
                                         </List.Item>
                                         <List.Item className="text-gray-800 dark:text-gray-300">
                                             <div className="inline-flex items-center flex-start gap-2">
-                                                <span className="flex items-center">Python <FaPython className={this.state.hideIcons ? 'hidden': 'ml-2'}/></span>  
-                                            </div>
-                                        </List.Item>
-                                        <List.Item className="text-gray-800 dark:text-gray-300">
-                                            <div className="inline-flex items-center flex-start gap-2">
-                                                <span className="flex items-center">ReactJS <RiReactjsFill className={this.state.hideIcons ? 'hidden': 'ml-2'}/></span>  
-                                            </div>
-                                        </List.Item>
-                                        <List.Item className="text-gray-800 dark:text-gray-300">
-                                            <div className="inline-flex items-center flex-start gap-2">
-                                                <span className="flex items-center">Symfony <FaSymfony className={this.state.hideIcons ? 'hidden': 'ml-2'}/></span>  
-                                            </div>
-                                        </List.Item>
-                                        <List.Item className="text-gray-800 dark:text-gray-300">
-                                            <div className="inline-flex items-center flex-start gap-2">
-                                                <span className="flex items-center">Ruby On Rails <SiRubyonrails className={this.state.hideIcons ? 'hidden': 'ml-2'}/></span>  
-                                            </div>
+                                                <span className="flex items-center">C# .NET & ASP.NET Core <SiCsharp className={this.state.hideIcons ? 'hidden': 'ml-2'}/></span>  
+                                            </div> 
                                         </List.Item>
                                         <List.Item className="text-gray-800 dark:text-gray-300">
                                             <div className="inline-flex items-center flex-start gap-2">
@@ -269,12 +252,17 @@ export default class Resume extends Component {
                                             <div className="inline-flex items-center flex-start gap-2">
                                                 <span className="flex items-center">JavaScript <IoLogoJavascript className={this.state.hideIcons ? 'hidden': 'ml-2'}/></span>  
                                             </div>
+                                        </List.Item> 
+                                        <List.Item className="text-gray-800 dark:text-gray-300">
+                                            <div className="inline-flex items-center flex-start gap-2">
+                                                <span className="flex items-center">Python <FaPython className={this.state.hideIcons ? 'hidden': 'ml-2'}/></span>  
+                                            </div>
                                         </List.Item>
                                         <List.Item className="text-gray-800 dark:text-gray-300">
                                             <div className="inline-flex items-center flex-start gap-2">
-                                                <span className="flex items-center">C# .NET & ASP.NET Core <SiCsharp className={this.state.hideIcons ? 'hidden': 'ml-2'}/></span>  
-                                            </div> 
-                                        </List.Item>
+                                                <span className="flex items-center">ReactJS <RiReactjsFill className={this.state.hideIcons ? 'hidden': 'ml-2'}/></span>  
+                                            </div>
+                                        </List.Item>   
                                     </List>
                                 </div>
                             </div> 
